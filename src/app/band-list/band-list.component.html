@@ -1,0 +1,4 @@
+<h4 class="favorites">Favorites: {{ favorites }}</h4>
+<div class="bands-list">
+  <app-band *ngFor="let band of bands" [band]="band" (favorited)="favorited($event)"></app-band>
+</div>

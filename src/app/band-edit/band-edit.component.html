@@ -1,0 +1,53 @@
+<button class="back" [routerLink]="['/bands', band.id, 'details']">Back</button>
+
+<form #infoForm="ngForm" (ngSubmit)="saveInfo(infoForm)">
+  <h3>Information</h3>
+  <div class="form-item">
+    <label for="name">Name</label>
+    <input type="text" name="name" [(ngModel)]="band.name" #name="ngModel" required />
+  </div>
+  <div class="form-errors" *ngIf="name.invalid && (name.dirty || name.touched)">
+    <div *ngIf="name.errors?.required">
+      Name is required
+    </div>
+  </div>
+  <div class="form-item">
+    <label for="bio">Bio</label>
+    <textarea
+      name="bio"
+      [(ngModel)]="band.bio"
+      #bio="ngModel"
+      rows="5"
+      minlength="10"
+      required
+    ></textarea>
+  </div>
+  <div class="form-errors" *ngIf="bio.invalid && (bio.dirty || bio.touched)">
+    <div *ngIf="bio.errors?.required">
+      Bio is required
+    </div>
+    <div *ngIf="bio.errors?.minlength">
+      Bio requires a minlength of 10
+    </div>
+  </div>
+  <button type="submit" [disabled]="!infoForm.valid">Save</button>
+</form>
+
+<form [formGroup]="albumForm" (ngSubmit)="saveAlbums()">
+  <h3>Albums</h3>
+  <button (click)="addAlbum()">Add</button>
+  <div
+    formArrayName="albums"
+    *ngFor="let album of albumForm.get('albums')['controls']; let i = index"
+  >
+    <div class="form-item">
+      <input type="text" [formControl]="album" />
+    </div>
+    <div class="form-errors" *ngIf="album.invalid && (album.dirty || album.touched)">
+      <div *ngIf="album.errors?.required">
+        Album is required
+      </div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!albumForm.valid">Save</button>
+</form>

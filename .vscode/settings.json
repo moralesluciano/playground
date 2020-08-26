@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "dist": true,
+      "node_modules": true,
+      ".vscode/chrome": true
+    },
+    "editor.formatOnSave": true,
+    "typescriptHero.imports.organizeOnSave": true,
+    "nxConsole.enableTelemetry": false
+  }
+  

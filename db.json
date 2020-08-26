@@ -1,0 +1,34 @@
+{
+  "bands": [
+    {
+      "id": 1,
+      "name": "The Beatles",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "albums": ["Yellow Submarine", "Abbey Road", "Let It Be"]
+    },
+    {
+      "id": 2,
+      "name": "The Rolling Stones",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "albums": []
+    },
+    {
+      "id": 3,
+      "name": "Led Zeppelin",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "albums": []
+    },
+    {
+      "id": 4,
+      "name": "Led Doors",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "albums": []
+    },
+    {
+      "id": 5,
+      "name": "Pink Floyd",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "albums": []
+    }
+  ]
+}

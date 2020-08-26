@@ -1,0 +1,5 @@
+<div (click)="onClick()" [appFavorited]="favorite">
+  <h3>{{ band.name }}</h3>
+  <p>{{ band.bio | preview }}</p>
+  <button [routerLink]="['bands', band.id, 'details']">Details</button>
+</div>
